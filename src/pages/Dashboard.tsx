@@ -32,7 +32,7 @@ export default function Dashboard() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">Welcome back, Alex 👋</h1>
+        <h1 className="text-3xl font-bold mb-2">Welcome back, Alex</h1>
         <p className="text-muted-foreground">Here's what's happening with your bug hunting today.</p>
       </div>
 

@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function DashboardHeader() {
   return (
-    <header className="h-16 border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
+    <header className="h-16 border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-10">
       <div className="h-full px-4 flex items-center justify-between gap-4">
         <div className="flex items-center gap-4 flex-1">
           <SidebarTrigger />

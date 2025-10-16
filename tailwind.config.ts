@@ -71,8 +71,8 @@ export default {
         'gradient-dark': 'var(--gradient-dark)',
       },
       boxShadow: {
-        'glow-cyan': 'var(--glow-cyan)',
-        'glow-purple': 'var(--glow-purple)',
+        'glow-red': 'var(--glow-red)',
+        'glow-white': 'var(--glow-white)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -118,10 +118,10 @@ export default {
         },
         "glow": {
           "0%, 100%": {
-            boxShadow: "0 0 20px hsl(189 94% 55% / 0.4)"
+            boxShadow: "0 0 20px hsl(0 84% 60% / 0.4)"
           },
           "50%": {
-            boxShadow: "0 0 30px hsl(189 94% 55% / 0.6)"
+            boxShadow: "0 0 30px hsl(0 84% 60% / 0.6)"
           }
         }
       },

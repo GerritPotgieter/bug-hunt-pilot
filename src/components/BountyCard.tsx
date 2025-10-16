@@ -23,7 +23,7 @@ export function BountyCard({ company, title, severity, reward, submissions, dead
   const severityStyle = severityConfig[severity];
 
   return (
-    <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 group">
+    <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 group hover:shadow-glow-red">
       <CardContent className="p-6">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">

@@ -11,7 +11,7 @@ interface StatCardProps {
 
 export function StatCard({ title, value, change, icon: Icon, trend }: StatCardProps) {
   return (
-    <Card className="bg-card border-border hover:shadow-glow-cyan transition-all duration-300 animate-fade-in">
+    <Card className="bg-card border-border hover:shadow-glow-red transition-all duration-300 animate-fade-in">
       <CardContent className="p-6">
         <div className="flex items-start justify-between">
           <div>
