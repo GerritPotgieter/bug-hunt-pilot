@@ -1,12 +1,7 @@
-import { DashboardLayout } from "@/components/DashboardLayout";
-import Dashboard from "./Dashboard";
+import Landing from "./Landing";
 
 const Index = () => {
-  return (
-    <DashboardLayout>
-      <Dashboard />
-    </DashboardLayout>
-  );
+  return <Landing />;
 };
 
 export default Index;
