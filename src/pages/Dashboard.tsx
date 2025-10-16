@@ -1,4 +1,5 @@
 import { DollarSign, Target, TrendingUp, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 import { StatCard } from "@/components/StatCard";
 import { BountyCard } from "@/components/BountyCard";
 import { LeaderboardEntry } from "@/components/LeaderboardEntry";
@@ -61,9 +62,11 @@ export default function Dashboard() {
               {activeBounties.map((bounty, index) => (
                 <BountyCard key={index} {...bounty} />
               ))}
-              <Button variant="outline" className="w-full border-border hover:bg-accent">
-                View All Bounties
-              </Button>
+              <Link to="/bounties">
+                <Button variant="outline" className="w-full border-border hover:bg-accent">
+                  View All Bounties
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>
@@ -77,9 +80,11 @@ export default function Dashboard() {
               {leaderboard.map((entry, index) => (
                 <LeaderboardEntry key={index} {...entry} />
               ))}
-              <Button variant="outline" className="w-full mt-4 border-border hover:bg-accent">
-                View Full Leaderboard
-              </Button>
+              <Link to="/leaderboard">
+                <Button variant="outline" className="w-full mt-4 border-border hover:bg-accent">
+                  View Full Leaderboard
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>
