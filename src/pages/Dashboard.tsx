@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Dashboard() {
   const stats = [
-    { title: "Total Earnings", value: "$24,500", change: "+12.5%", icon: DollarSign, trend: "up" as const },
+    { title: "Total Points", value: "69,420", change: "+12.5%", icon: DollarSign, trend: "up" as const },
     { title: "Active Bounties", value: "18", change: "+3", icon: Target, trend: "up" as const },
     { title: "Success Rate", value: "87%", change: "+5%", icon: TrendingUp, trend: "up" as const },
     { title: "Global Rank", value: "#47", change: "↑2", icon: Award, trend: "up" as const },
