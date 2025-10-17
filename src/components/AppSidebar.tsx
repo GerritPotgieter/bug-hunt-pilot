@@ -30,15 +30,15 @@ export function AppSidebar() {
       <SidebarContent>
         <div className="px-4 py-6">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <Target className="h-5 w-5 text-primary-foreground" />
+            <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center p-1">
+              <img src="/mordor-logo.svg" alt="Mordor" className="h-full w-full" />
             </div>
             {!collapsed && (
               <div>
                 <h2 className="font-bold text-lg bg-gradient-primary bg-clip-text text-transparent">
-                  BugHunt
+                  Mordor
                 </h2>
-                <p className="text-xs text-muted-foreground">Security Platform</p>
+                <p className="text-xs text-muted-foreground">Absa Bug bounty platform</p>
               </div>
             )}
           </div>
