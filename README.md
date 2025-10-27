@@ -1,4 +1,3 @@
-
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
@@ -12,7 +11,6 @@ npm i
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-
 
 ## What technologies are used for this project?
 
@@ -43,6 +41,7 @@ npm run deploy
 ```
 
 This will:
+
 1. Build the production version of the site
 2. Deploy the `dist` folder to the `gh-pages` branch
 
@@ -61,4 +60,3 @@ To preview the production build locally:
 npm run build
 npm run preview
 ```
-
