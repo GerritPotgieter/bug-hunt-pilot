@@ -1,26 +1,3 @@
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/68ba39d2-2e3e-4b3b-92dd-d8d1e97ea640
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/68ba39d2-2e3e-4b3b-92dd-d8d1e97ea640) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
@@ -36,19 +13,6 @@ npm i
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
 ## What technologies are used for this project?
 
@@ -60,14 +24,41 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/68ba39d2-2e3e-4b3b-92dd-d8d1e97ea640) and click on Share -> Publish.
+This project is configured to deploy to GitHub Pages automatically.
 
-## Can I connect a custom domain to my Lovable project?
+### Automatic Deployment
 
-Yes, you can!
+The site automatically deploys to GitHub Pages when you push to the `main` branch. The GitHub Actions workflow handles the build and deployment process.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Live URL:** https://GerritPotgieter.github.io/bug-hunt-pilot
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Manual Deployment
+
+You can also deploy manually using:
+
+```sh
+npm run deploy
+```
+
+This will:
+1. Build the production version of the site
+2. Deploy the `dist` folder to the `gh-pages` branch
+
+### Setup Instructions (First Time)
+
+1. Go to your repository settings on GitHub
+2. Navigate to **Settings** > **Pages**
+3. Under **Source**, select **GitHub Actions**
+4. The site will be available at: `https://GerritPotgieter.github.io/bug-hunt-pilot`
+
+### Local Preview
+
+To preview the production build locally:
+
+```sh
+npm run build
+npm run preview
+```
+
