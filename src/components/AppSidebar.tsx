@@ -1,5 +1,5 @@
 import { Home, Trophy, FileText, Users, Settings, Target, ShieldCheck } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -33,9 +33,13 @@ export function AppSidebar() {
     <Sidebar collapsible="icon" className="border-r border-sidebar-border">
       <SidebarContent>
         <div className="px-4 py-6">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center p-1">
-              <img src="/mordor-logo.svg" alt="Mordor" className="h-full w-full" />
+              <img 
+                src={import.meta.env.BASE_URL + "mordor-logo.svg"} 
+                alt="Mordor" 
+                className="h-full w-full" 
+              />
             </div>
             {!collapsed && (
               <div>
@@ -45,7 +49,7 @@ export function AppSidebar() {
                 <p className="text-xs text-muted-foreground">Absa Bug bounty platform</p>
               </div>
             )}
-          </div>
+          </Link>
         </div>
 
         <SidebarGroup>

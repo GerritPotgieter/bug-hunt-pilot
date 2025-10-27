@@ -1,4 +1,5 @@
 import { Bell, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,6 +11,16 @@ export function DashboardHeader() {
       <div className="h-full px-4 flex items-center justify-between gap-4">
         <div className="flex items-center gap-4 flex-1">
           <SidebarTrigger />
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img 
+              src={import.meta.env.BASE_URL + "mordor-logo.svg"} 
+              alt="Mordor" 
+              className="h-6 w-6" 
+            />
+            <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent hidden sm:block">
+              Mordor
+            </span>
+          </Link>
           <div className="relative max-w-md flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
