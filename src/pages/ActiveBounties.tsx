@@ -7,12 +7,12 @@ import { Input } from "@/components/ui/input";
 
 export default function ActiveBounties() {
   const bounties = [
-    { company: "TechCorp", title: "XSS Vulnerability in Authentication", severity: "critical" as const, reward: "$5,000", submissions: 12, deadline: "3 days" },
-    { company: "CloudServe", title: "API Rate Limiting Bypass", severity: "high" as const, reward: "$3,500", submissions: 8, deadline: "5 days" },
-    { company: "DataFlow", title: "SQL Injection in User Dashboard", severity: "critical" as const, reward: "$4,800", submissions: 15, deadline: "2 days" },
-    { company: "SecureBank", title: "CSRF Token Validation Issue", severity: "medium" as const, reward: "$2,000", submissions: 6, deadline: "7 days" },
-    { company: "FinTech Inc", title: "Authentication Bypass in Mobile App", severity: "critical" as const, reward: "$6,000", submissions: 20, deadline: "4 days" },
-    { company: "WebStore", title: "Price Manipulation in Checkout", severity: "high" as const, reward: "$4,200", submissions: 11, deadline: "6 days" },
+    { id: "BNT-001", company: "TechCorp", title: "XSS Vulnerability in Authentication", severity: "critical" as const, reward: "$5,000", submissions: 12, deadline: "3 days" },
+    { id: "BNT-002", company: "CloudServe", title: "API Rate Limiting Bypass", severity: "high" as const, reward: "$3,500", submissions: 8, deadline: "5 days" },
+    { id: "BNT-003", company: "DataFlow", title: "SQL Injection in User Dashboard", severity: "critical" as const, reward: "$4,800", submissions: 15, deadline: "2 days" },
+    { id: "BNT-004", company: "SecureBank", title: "CSRF Token Validation Issue", severity: "medium" as const, reward: "$2,000", submissions: 6, deadline: "7 days" },
+    { id: "BNT-005", company: "FinTech Inc", title: "Authentication Bypass in Mobile App", severity: "critical" as const, reward: "$6,000", submissions: 20, deadline: "4 days" },
+    { id: "BNT-006", company: "WebStore", title: "Price Manipulation in Checkout", severity: "high" as const, reward: "$4,200", submissions: 11, deadline: "6 days" },
   ];
 
   return (

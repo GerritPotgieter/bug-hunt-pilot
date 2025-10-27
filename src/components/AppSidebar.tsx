@@ -1,4 +1,4 @@
-import { Home, Trophy, FileText, Users, Settings, Target } from "lucide-react";
+import { Home, Trophy, FileText, Users, Settings, Target, ShieldCheck } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -21,6 +21,10 @@ const menuItems = [
   { title: "Settings", url: "/settings", icon: Settings },
 ];
 
+const adminItems = [
+  { title: "Admin Panel", url: "/admin", icon: ShieldCheck },
+];
+
 export function AppSidebar() {
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
@@ -30,15 +34,15 @@ export function AppSidebar() {
       <SidebarContent>
         <div className="px-4 py-6">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <Target className="h-5 w-5 text-primary-foreground" />
+            <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center p-1">
+              <img src="/mordor-logo.svg" alt="Mordor" className="h-full w-full" />
             </div>
             {!collapsed && (
               <div>
                 <h2 className="font-bold text-lg bg-gradient-primary bg-clip-text text-transparent">
-                  BugHunt
+                  Mordor
                 </h2>
-                <p className="text-xs text-muted-foreground">Security Platform</p>
+                <p className="text-xs text-muted-foreground">Absa Bug bounty platform</p>
               </div>
             )}
           </div>
@@ -49,6 +53,32 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild>
+                    <NavLink
+                      to={item.url}
+                      end
+                      className={({ isActive }) =>
+                        isActive
+                          ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                          : "hover:bg-sidebar-accent/50"
+                      }
+                    >
+                      <item.icon className="h-4 w-4" />
+                      <span>{item.title}</span>
+                    </NavLink>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Admin</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {adminItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <NavLink

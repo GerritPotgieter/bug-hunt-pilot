@@ -33,9 +33,9 @@ const Landing = () => {
       <nav className="border-b border-border/40 backdrop-blur-sm bg-background/80 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Shield className="h-8 w-8 text-primary" />
+            <img src="/mordor-logo.svg" alt="Mordor" className="h-8 w-8" />
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              BugHunt
+              Mordor
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -55,13 +55,13 @@ const Landing = () => {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Welcome to the{" "}
             <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              Elite Bug Bounty
+              Absa Bug Bounty
             </span>{" "}
             Platform
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Discover vulnerabilities, earn rewards, and help secure the digital world. 
-            Join thousands of researchers hunting bugs across the globe's leading platforms.
+            Discover vulnerabilities, earn kudos, and help secure the digital world. 
+            Join our community of Absa Developers in securing our systems and applications.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <Link to="/dashboard">
@@ -83,9 +83,9 @@ const Landing = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {[
             { label: "Active Bounties", value: "250+" },
-            { label: "Total Paid Out", value: "$2.5M" },
+            { label: "Total Points Earned", value: "2.5M" },
             { label: "Security Researchers", value: "10K+" },
-            { label: "Vulnerabilities Found", value: "50K+" },
+            { label: "Vulnerabilities Found", value: "50+" },
           ].map((stat, index) => (
             <Card
               key={index}
@@ -106,10 +106,10 @@ const Landing = () => {
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Why Choose BugHunt?
+            What Mordor is about.
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-            The most advanced bug bounty platform built for researchers who demand excellence.
+            What started as a discussion led to a real, actionable platform to help the Absa brand.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => {
@@ -138,12 +138,12 @@ const Landing = () => {
         <Card className="max-w-4xl mx-auto bg-gradient-to-r from-primary/10 via-card to-primary/10 border-primary/20">
           <CardContent className="p-12 text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Ready to Start Your Journey?
+              Ready to Start Hunting?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Join the elite community of security researchers making the internet safer, 
-              one vulnerability at a time. Start earning today.
+            <p className="text-medium text-muted-foreground max-w-2xl mx-auto">
+              Join the rest of your Absa Developer colleagues in securing our systems and applications. Sign up today and start earning rewards for your findings!
             </p>
+            <br />
             <Link to="/dashboard">
               <Button size="lg" className="text-lg px-12 shadow-[0_0_30px_hsl(var(--primary)/0.4)] hover:shadow-[0_0_40px_hsl(var(--primary)/0.6)]">
                 Register Now <ArrowRight className="ml-2" />

@@ -2,8 +2,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface BountyCardProps {
+  id?: string;
   company: string;
   title: string;
   severity: "critical" | "high" | "medium" | "low";
@@ -19,8 +21,13 @@ const severityConfig = {
   low: { color: "bg-muted text-muted-foreground", label: "Low" },
 };
 
-export function BountyCard({ company, title, severity, reward, submissions, deadline }: BountyCardProps) {
+export function BountyCard({ id = "BNT-001", company, title, severity, reward, submissions, deadline }: BountyCardProps) {
   const severityStyle = severityConfig[severity];
+  const navigate = useNavigate();
+
+  const handleViewDetails = () => {
+    navigate(`/bounty/${id}`);
+  };
 
   return (
     <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 group hover:shadow-glow-red">
@@ -54,6 +61,7 @@ export function BountyCard({ company, title, severity, reward, submissions, dead
           <Button 
             size="sm" 
             className="opacity-0 group-hover:opacity-100 transition-opacity bg-primary hover:bg-primary/90"
+            onClick={handleViewDetails}
           >
             View Details
             <ArrowUpRight className="h-4 w-4 ml-1" />
